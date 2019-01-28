@@ -1,3 +1,13 @@
+" Vundle
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+call vundle#end()         
+filetype plugin indent on 
+
 " Install Plug if not already installed
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -18,7 +28,7 @@ set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ }
-let g:seoul256_background = 235
+let g:seoul256_background = 234
 
 colo seoul256
 set ignorecase
