@@ -28,7 +28,7 @@ set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ }
-let g:seoul256_background = 234
+let g:seoul256_background = 235
 
 colo seoul256
 set ignorecase
