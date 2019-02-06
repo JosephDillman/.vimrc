@@ -36,9 +36,11 @@ syntax enable
 set showmatch
 set number
 set cursorline
+
 nnoremap j gj
 nnoremap k gk
-nnoremap <Tab> <Esc>
+imap cc <Esc>
+
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
