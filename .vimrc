@@ -5,6 +5,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'terryma/vim-smooth-scroll'
+
 call vundle#end()         
 filetype plugin indent on 
 
@@ -15,7 +17,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Install Plugins
+" Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'haya14busa/incsearch.vim'
 Plug 'itchyny/lightline.vim'
@@ -36,10 +38,15 @@ syntax enable
 set showmatch
 set number
 set cursorline
+set hlsearch
+set paste
 
 nnoremap j gj
 nnoremap k gk
-imap cc <Esc>
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 10, 4)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 10, 4)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
